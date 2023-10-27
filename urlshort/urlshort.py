@@ -60,7 +60,7 @@ def your_url():
         else:  # 'file'
             f = request.files['file']
             full_name = request.form['code'] + secure_filename(f.filename)
-            f.save('C:/wrk/flasklearn/essentailproject/urlshort/static/file_storage/' + full_name)
+            f.save('C:/wrk/flasklearn/flask_essential/urlshort/static/file_storage/' + full_name)
             urls[request.form['code']] = {'file': full_name}
 
         with open('urlshort/static/shortcodes/urls.json', 'w') as url_file:
